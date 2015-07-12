@@ -18,6 +18,9 @@ if not path.exists(tree + "/.git"):
 #print("clearing out any changes in tree")
 #print "git --git-dir=" + tree + "/.git checkout ."
 #system("git --git-dir=" + tree + "/.git checkout .")
+
+#TODO: raise exception if local changes in tree?
+
 print("updating tree")
 print "git --git-dir=" + tree + "/.git pull"
 system("git --git-dir=" + tree + "/.git pull")
@@ -26,5 +29,5 @@ print("calling meld")
 print "meld " + tree + " " + working
 system("meld " + tree + " " + working)
 
-
-# TODO: add a verbose option to disable printing of commands that are run
+#TODO: add a verbose option to disable printing of commands that are run
+#TODO: only show changes to files that have been `git --add`ed?
