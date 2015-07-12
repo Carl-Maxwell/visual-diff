@@ -9,8 +9,11 @@ that is, it requires a `trees` directory that contains initialized git repos
 
 in future it will probably just create these repos itself,
 
-and maybe use a hidden .trees folder for them... hm.
+and maybe use a hidden .visualdiff folder for them.
 
-Also, this script must be run from within your repo.
+# usage
 
-It is intended to be used immediately before committing to check your changes
+This script must be run from within your repo.
+
+It is intended to be used after `git --add`, while you are writing the commit
+message
