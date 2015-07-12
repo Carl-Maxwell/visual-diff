@@ -1,4 +1,4 @@
-#! /usr/bin/env python 
+#! /usr/bin/env python
 
 import argparse
 
@@ -12,9 +12,10 @@ name = working.split("/")[-1]
 
 tree = "/".join(working.split("/")[0:-1]) + "/trees/" + name
 
+print("clearing out any changes in tree")
+system("git --git-dir=" + tree + "/.git checkout .")
 print("updating tree")
 system("git --git-dir=" + tree + "/.git pull")
 
 print("calling meld")
 system("meld " + tree + " " + working)
-
